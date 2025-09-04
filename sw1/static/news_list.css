@@ -1,0 +1,192 @@
+/* Кнопки */
+button {
+  background-color: #d4d4d4;
+  color: 423526;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#ext {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+button:hover {
+  background-color: #bdbdbd;
+  transform: translateY(-2px);
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #006400;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #006400;
+  font-size: 22px;
+}
+
+div.project,
+div.news,
+div.achievement {
+  background-color: #e4e4e4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+div.project a,
+div.news a,
+div.achievement a {
+  color: #006400;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+div.project p,
+div.news p,
+div.achievement p {
+  font-size: 16px;
+  color: #006400;
+}
+
+div.project h3,
+div.news h3,
+div.achievement h3 {
+  font-size: 20px;
+  color: #006400;
+}
+
+a {
+  color: #006400;
+}
+
+main .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+main .logo img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px; /* Уменьшаем отступ */
+  border-radius: 50%;
+}
+
+main h1 {
+  color: #006400;
+  font-size: 30px;
+  margin: 0;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Современный шрифт */
+  text-transform: uppercase; /* Сделать текст в верхнем регистре */
+  letter-spacing: 1px; /* Немного увеличиваем расстояние между буквами */
+  margin-top: 5px;
+  margin-left: 50px;
+}
+
+.name_logo {
+  width: 630px;
+  margin-left: 20px;
+  height: 55px;
+  position: absolute;
+  background-color: #d1ccc0;
+  z-index: -1;
+  border-radius: 10px;
+  border: 3px white solid;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="date"],
+input[type="file"] {
+  padding: 8px;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #acacac;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #535353;
+}
+
+.message {
+  padding: 20px;
+  background-color: #e7f4e6;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #b3e6b3;
+  text-align: center;
+}
+
+.message p {
+  font-size: 16px;
+  color: #333;
+}
+
+.message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.message a:hover {
+  text-decoration: underline;
+}
+
+.new-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+  object-fit: cover;
+}

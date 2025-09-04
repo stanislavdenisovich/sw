@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список участников</title>
+    <link rel="stylesheet" href="../static/people_list.css" />
+    <link rel="stylesheet" href="../static/main.css" />
+  </head>
+  <body>
+    <header style="margin-bottom: 100px">
+      <nav>
+        <span><a href="/main_admin" id="store_id">Главная</a></span>
+        <span><a href="events_admin" id="store_id">События</a></span>
+        <span><a href="project_admin" id="store_id2">Проекты</a></span>
+        <span><a href="news_admin" id="store_id3">Новости</a></span>
+        <span><a href="people_admin" id="store_id7">Участники</a></span>
+        <span
+          ><a href="achievements_admin" id="store_id8"
+            >Достижения Школы</a
+          ></span
+        >
+        <span
+          ><a href="achievements_frac_admin" id="store_id9"
+            >Достижения Фракции</a
+          ></span
+        >
+        <img
+          id="cur"
+          src="https://cdn.icon-icons.com/icons2/3285/PNG/512/magnifying_glass_magnifier_search_icon_208236.png"
+          alt=""
+          style="width: 30px; height: auto"
+        />
+      </nav>
+    </header>
+
+    <style>
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      label {
+        font-weight: bold;
+        color: #555;
+      }
+
+      input,
+      select,
+      textarea,
+      button {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: #c4c4c4;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #6e6e6e;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+      }
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      p {
+        text-align: center;
+        color: #777;
+      }
+    </style>
+
+    <div class="container">
+      <h2>Добавить человека:</h2>
+      <form action="/people_admin" method="POST" enctype="multipart/form-data">
+        <label for="first_name">Имя:</label>
+        <input type="text" name="first_name" id="first_name" required />
+
+        <label for="second_name">Фамилия:</label>
+        <input type="text" name="second_name" id="second_name" required />
+
+        <label for="group_name">Группа:</label>
+        <select name="group_name" id="group_name" required>
+          {% for group in groups %}
+          <option value="{{ group[0] }}">{{ group[0] }}</option>
+          {% endfor %}
+        </select>
+
+        <label for="file">Загрузить файл:</label>
+        <input type="file" name="file" id="file" />
+
+        <button type="submit">Добавить человека</button>
+      </form>
+
+      {% if people and people|length > 0 %}
+      <h3>Список участников:</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Группа</th>
+            <th>Файл</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in people %}
+          <tr>
+            <td>{{ person[0] }}</td>
+            <td>{{ person[1] }}</td>
+            <td>{{ person[2] }}</td>
+            <td>
+              {% if person[3] %}
+              <a
+                href="{{ url_for('static', filename='uploads/' + person[3]) }}"
+                target="_blank"
+                >Скачать</a
+              >
+              {% else %} Нет файла {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p>Нет данных для отображения.</p>
+      {% endif %}
+    </div>
+
+    <footer class="footer" style="position: relative; margin-top: 300px">
+      <div class="footer_content">
+        <div class="footer_section">
+          <h4>О проекте</h4>
+          <p>
+            Наш проект посвящен продвижению экологической осведомленности и
+            устойчивого развития в Казахстане. Мы стремимся вдохновить людей
+            заботиться о природе и активно участвовать в её защите.
+          </p>
+        </div>
+        <div class="footer_section">
+          <h4>Контакты</h4>
+          <ul>
+            <li>Email: <a href="mailto:info@ecokz.kz">sch93@kargoo.kz</a></li>
+            <li>Телефон: 8(7212) 25-31-28</li>
+            <li>Адрес: г. Караганда, ул. Алиханова, 24</li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Социальные сети</h4>
+          <ul class="social_links">
+            <li>
+              <a
+                href="https://www.facebook.com/sch93krg/
+              "
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/gimnazia_imeni_shakarima/"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>© 2024 Экология Свет Шакарима.</p>
+      </div>
+    </footer>
+  </body>
+</html>

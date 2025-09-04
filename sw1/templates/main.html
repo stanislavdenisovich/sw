@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/main.css" />
+    <link rel="stylesheet" href="../static/interactive.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title>Страница Главная</title>
+  </head>
+  <style>
+.main-heading {
+
+  font-size: 95px; /* Размер шрифта */
+  color: #FF6347; /* Яркий цвет для мультяшного стиля */
+  text-align: left; /* Выравнивание текста по левому краю */
+  margin-top: 300px; /* Отступ сверху */
+  margin-left: 110px; /* Отступ слева */
+  font-weight: 700;
+
+  
+  /* Добавление тени */
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+</style>
+  <style>
+    header {
+      background: none;
+      border-bottom: none;
+    }
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+    body {
+      background-image: url("https://ecojer.kz/images/1697710609.65310211c1c4a.png");
+      background-size: auto;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  </style>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      border: solid rgba(0, 0, 0, 0.15);
+      border-width: 1px 0;
+      box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -0.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet" />
+  <body>
+    <div
+      id="all"
+      style="
+        background-color: #f4f4f4;
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        top: 60px;
+        opacity: 0%;
+        z-index: -1;
+      "
+    ></div>
+    <header>
+      <nav>
+        <span><a href="/events_list" id="store_id">События</a></span>
+        <span><a href="/project_list" id="store_id2">Проекты</a></span>
+        <span><a href="/news_list" id="store_id3">Новости</a></span>
+        <span><a href="/people_list" id="store_id7">Участники</a></span>
+        <span
+          ><a href="/achievements_list" id="store_id8"
+            >Достижения Школы</a
+          ></span
+        >
+        <span
+          ><a href="/achievements_frac_list" id="store_id9"
+            >Достижения Фракции</a
+          ></span
+        >
+	<span
+            ><a href="/admin_registration" style="margin-left: 20px"
+              >Админ</a
+            ></span
+          ><span>/</span
+          ><span><a href="/member_registration">Участник</a></span></span
+        >
+        <div class="container-fluid" style="width: 400px; margin-right: -50px;">
+          <form class="d-flex" role="search" id="searchForm">
+            <input
+              style="background: #f9f9f9; border: 1px solid #ccc; border-radius: 30px; padding: 10px 20px; font-size: 16px; color: #555; width: 100%; transition: all 0.3s ease-in-out;"
+              class="form-control me-2"
+              type="search"
+              id="searchInput"
+              placeholder="Поиск"
+              aria-label="Поиск"
+            >
+            <button
+              style="margin-left: 15px; background-color: #808080; color: white; border-radius: 30px; padding: 10px 20px; font-size: 16px; border: none; transition: all 0.3s ease-in-out; cursor: pointer;"
+              class="btn btn-outline-success"
+              type="submit"
+            >
+              Поиск
+            </button>
+          </form>
+        </div>
+        
+      </nav>
+    </header>
+
+
+
+
+    <img src="../static/Images/logo3.jpeg" alt="" style="width: 200px; height: 200px; border-radius: 50%; position: absolute; margin-left: 100px; margin-top: 100px;">
+    <h1 class="main-heading" style="position: absolute;color: white ;">Экологический <br>Свет<br> Шакарима</h1>
+
+    <img
+    src="../static/Images/eco-card_inter.png"
+    alt=""
+    style="width: 1000px; height: 650px; margin-top: 40px; margin-left: 800px;"
+  />
+
+    <a href="/batys_kaz">
+      <div class="card1">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Западно-Казахстанская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 683 327 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Уральск</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>10 марта
+              1932г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/atyrau">
+      <div class="card2">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Атырауская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 681 241 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Атырау</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>15 января
+              1938 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/mangystau">
+      <div class="card3">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Мангистауская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 745 909 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Актау</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span> 20 марта
+              1973 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/aktobe">
+      <div class="card4">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Актюбинская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 925 864 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Актобе</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>10 марта
+              1932 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/kyzylorda">
+      <div class="card5">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Кызылординская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 823 251 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Кызылорда</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>15 января
+              1938 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/turkystan">
+      <div class="card6">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Туркистанская Область</span
+            >
+            <p>
+              <span style="font-size: 17px">Население:</span> 2 153 156 чел.
+            </p>
+            <p><span style="font-size: 17px">Столица:</span> Туркестан</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>10 марта 1932
+              г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/jambyl">
+      <div class="card7">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Жамбылская Область</span
+            >
+            <p>
+              <span style="font-size: 17px">Население:</span> 1 210 156 чел.
+            </p>
+            <p><span style="font-size: 17px">Столица:</span> Тараз</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>14 октября
+              1939 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/almaty">
+      <div class="card8">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Алматинская Область</span
+            >
+            <p>
+              <span style="font-size: 17px">Население:</span> 1 551 156 чел.
+            </p>
+            <p><span style="font-size: 17px">Столица:</span> Алмата</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>10 марта 1932
+              г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/jetisu">
+      <div class="card9">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Жетысуская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 650 000 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Талдыкорган</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>8 июня 2022 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/abai">
+      <div class="card10">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Абайская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 638 300 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Семей</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>8 июня 2022 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/shygys_kaz">
+      <div class="card11">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Восточно-Казахстанская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 730 172 чел.</p>
+            <p>
+              <span style="font-size: 17px">Столица:</span> Усть-Каменогорск
+            </p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>10 марта
+              1932 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/karaganda">
+      <div class="card12">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Карагандинская Область</span
+            >
+            <p>
+              <span style="font-size: 17px">Население:</span> 1 134 172 чел.
+            </p>
+            <p><span style="font-size: 17px">Столица:</span> Караганда</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span>10 марта
+              1932 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/ulytau">
+      <div class="card13">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Улытауская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 221 564 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Жезказган</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span> 8 июня 2022г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/kostanay">
+      <div class="card14">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Костанайская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 835 686 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Костанай</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span> 29 июля
+              1936 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/akmola">
+      <div class="card15">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Акмолинская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 785 708 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Кокшетау</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span> 14 октября
+              1939 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/soltustyk_kaz">
+      <div class="card16">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Северо-Казахстанская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 539 111 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Петропавловск</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span> 29 июля
+              1936 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/pavlodar">
+      <div class="card17">
+        <button class="btn2">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Павлодарская Область</span
+            >
+            <p><span style="font-size: 17px">Население:</span> 756 511 чел.</p>
+            <p><span style="font-size: 17px">Столица:</span> Павлодар</p>
+            <p>
+              <span style="font-size: 17px">Дата Основания:</span> 15 января
+              1938 г.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/kaspi">
+      <div class="card18">
+        <button class="btn2" id="btn3">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Каспийское Море</span
+            >
+            <p><span style="font-size: 17px">Площадь:</span> 371 000 км².</p>
+            <p><span style="font-size: 17px">Средняя глубина:</span> 211 м.</p>
+            <p>
+              <span style="font-size: 17px">Длина береговой линии:</span> около
+              7000 км.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/balhash">
+      <div class="card19">
+        <button class="btn2" id="btn3">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Озеро Балхаш</span
+            >
+            <p>
+              <span style="font-size: 17px">Площадь:</span> около 16 400 км²
+            </p>
+            <p>
+              <span style="font-size: 17px">Средняя глубина:</span> около 6 м,
+              максимальная — до 26 м.
+            </p>
+            <p>
+              <span style="font-size: 17px">Длина береговой линии:</span>
+              примерно 2385 км.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/oral">
+      <div class="card20">
+        <button class="btn2" id="btn3">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Аральское Море</span
+            >
+            <p>
+              <span style="font-size: 17px">Площадь:</span> около 68 000 км²
+            </p>
+            <p>
+              <span style="font-size: 17px">Средняя глубина:</span> 16–20 м,
+              максимальная — до 69 м
+            </p>
+            <p>
+              <span style="font-size: 17px">Длина береговой линии:</span>
+              примерно 4000 км.
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <a href="/semipalatinsk">
+      <div class="card21">
+        <button class="btn2" id="btn3">
+          <div class="tooltip2">
+            <span style="font-size: 22px; font-weight: 600; color: #5f5f5f"
+              >Семипалатинский Полигон</span
+            >
+            <p>
+              <span style="font-size: 17px">Дата Создания:</span> около 68 000
+              км²
+            </p>
+            <p>
+              <span style="font-size: 17px">Общая Площадь:</span> 16–20 м,
+              максимальная — до 69 м
+            </p>
+            <p>
+              <span style="font-size: 17px">Испытания:</span> с 1949 по 1989
+              годы было проведено 456 ядерных испытаний
+            </p>
+          </div>
+        </button>
+      </div>
+    </a>
+
+    <div class="main2">
+      <center>
+        <!-- <img id="apple_gift" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag-map_of_Kazakhstan_%28precise_boundaries%29.svg/1280px-Flag-map_of_Kazakhstan_%28precise_boundaries%29.svg.png" alt="" style="width: 1000px; height: auto; margin-top: -250px;"> -->
+        <div class="main22">
+          <h2 id="apple_h2">
+            <a
+              href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B_%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD%D0%B0"
+              target="_blank"
+              >Экологические Проблемы Казахстана</a
+            >
+          </h2>
+        </div>
+      </center>
+    </div>
+
+    <main>
+        <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" style="margin-bottom: 0;">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <svg
+                class="bd-placeholder-img"
+                width="100%"
+                height="500px"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+                <image
+                  href="../static/Images/car1.png"
+                  width="100%" 
+                  height="100%" 
+                  preserveAspectRatio="xMidYMid slice"
+                />
+              </svg>
+              
+              <div class="container">
+                <div class="carousel-caption text-start">
+                  <h1>Жамбылская область</h1>
+                  <p class="opacity-85">
+                    Жамбылская область — это один из регионов Казахстана, расположенный в южной части страны. Ее административным центром является город Тараз, который является одним из древнейших городов Казахстана с богатой историей и культурным наследием. Область граничит с Киргизией, Алматинской и Кызылординской областями.
+                  </p>
+                  <p>
+                    <a class="btn btn-lg btn-secondary" href="#">Узнать Подробнее</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+                <svg
+                class="bd-placeholder-img"
+                width="100%"
+                height="500px"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+                <image
+                  href="../static/Images/car2.png"
+                  width="100%" 
+                  height="100%" 
+                  preserveAspectRatio="xMidYMid slice"
+                />
+              </svg>
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Карагандинская область</h1>
+                  <p class="opacity-85">
+                    Карагандинская область — один из крупнейших регионов Казахстана, расположенный в центральной части страны. Административным центром области является город Караганда, который также является важным промышленным и культурным центром страны. 
+                  </p>
+                  <p><a class="btn btn-lg btn-secondary" href="#">Узнать Подробнее</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+                <svg
+                class="bd-placeholder-img"
+                width="100%"
+                height="500px"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+                <image
+                  href="../static/Images/car3.png"
+                  width="100%" 
+                  height="100%" 
+                  preserveAspectRatio="xMidYMid slice"
+                />
+              </svg>
+              <div class="container">
+                <div class="carousel-caption text-end">
+                  <h1>Алматинская область </h1>
+                  <p class="opacity-85">
+                    Алматинская область — один из самых крупных и разнообразных регионов Казахстана, расположенный на юго-востоке страны. Административным центром области является город Талдыкорган. Область граничит с Кыргызстаном, Китаем, а также с несколькими регионами Казахстана, такими как Жамбылская и Восточно-Казахстанская области.
+                  </p>
+                  <p>
+                    <a class="btn btn-lg btn-secondary" href="#">Узнать Подробнее</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+  
+        <!-- Marketing messaging and featurettes
+    ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+        <div class="container marketing" style="margin-top: 100px;">
+          <!-- Three columns of text below the carousel -->
+          <div class="row">
+            <div class="col-lg-4">
+                <svg
+                class="bd-placeholder-img rounded-circle"
+                width="140"
+                height="140"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Placeholder"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"  
+              >
+                <title>Placeholder</title>
+                <!-- Вставляем изображение с закругленными углами -->
+                <image
+                  href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttYlwGyMeUPZRBQ7xnDFNsaevtbG1TI_b0w&s" 
+                  width="100%"
+                  height="100%"
+                  preserveAspectRatio="xMidYMid slice"
+                  rx="70"  
+                  ry="70"  
+                />
+              </svg>
+              
+              <h2 class="fw-normal">Каспийское Море</h2>
+              <p>
+                Каспийское море — крупнейшее в мире озеро, расположенное между Европой и Азией, и часть его территорий принадлежит Казахстану. 
+              </p>
+              <p>
+                <a class="btn btn-secondary" href="#">Узнать Подробнее &raquo;</a>
+              </p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <svg
+                class="bd-placeholder-img rounded-circle"
+                width="140"
+                height="140"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Placeholder"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"  
+              >
+                <title>Placeholder</title>
+                <!-- Вставляем изображение с закругленными углами -->
+                <image
+                  href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsRS31HTKzyB4ZNIaspvKVNxaS9ERJhQdKAg&s" 
+                  width="100%"
+                  height="100%"
+                  preserveAspectRatio="xMidYMid slice"
+                  rx="70"  
+                  ry="70"  
+                />
+              </svg>
+              <h2 class="fw-normal">Аральское море </h2>
+              <p>
+                Аральское море — это одно из самых крупных озер в мире, которое некогда занимало огромную площадь в Центральной Азии
+              </p>
+              <p>
+                <a class="btn btn-secondary" href="#">Узнать Подробнее &raquo;</a>
+              </p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <svg
+                class="bd-placeholder-img rounded-circle"
+                width="140"
+                height="140"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Placeholder"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+                style="filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"  
+              >
+                <title>Placeholder</title>
+                <!-- Вставляем изображение с закругленными углами -->
+                <image
+                  href="https://livingasia.online/wp-content/uploads/2024/04/poligon2.jpg" 
+                  width="100%"
+                  height="100%"
+                  preserveAspectRatio="xMidYMid slice"
+                  rx="70"  
+                  ry="70"  
+                />
+              </svg>
+              <h2 class="fw-normal">Семипалатинский полигон</h2>
+              <p>
+                Семипалатинский полигон — это бывший советский ядерный испытательный полигон, расположенный в Казахстане
+              </p>
+              <p>
+                <a class="btn btn-secondary" href="#">Узнать Подробнее &raquo;</a>
+              </p>
+            </div>
+            <!-- /.col-lg-4 -->
+          </div>
+          <!-- /.row -->
+  
+          <!-- START THE FEATURETTES -->
+  
+          <hr class="featurette-divider" />
+  
+          <div class="row featurette" style="margin-top: 50px; margin-bottom: 100px;">
+            <div class="about_us_text" style="width: 650px; padding-left: 50px;">
+                <h2>О нас</h2>
+                <h3>
+                  Экологический <br />
+                  Свет <br />Шакарима
+                </h3>
+                <p>
+                  <strong>Наша миссия:</strong> Сделать мир лучше, защищая нашу
+                  природу.
+                </p>
+                <p>
+                  <strong>Наша цель:</strong> Быть лидерами в нашей области и
+                  вдохновлять <br> других на успех.
+                </p>
+              </div>
+              <div class="col-md-5" style="margin-left: 100px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); border-radius: 20px;">
+                <svg
+                  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                  width="500"
+                  height="500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="Placeholder: 500x500"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                >
+                  <title>Placeholder</title>
+                  <!-- Вставляем изображение с закругленными углами и тенью -->
+                  <image
+                    href="../static/Images/logo3.jpeg"
+                    width="100%"
+                    height="100%"
+                    preserveAspectRatio="xMidYMid slice"
+                    style="border-radius: 15px;" 
+                  />
+                </svg>
+              </div>
+              
+          </div>
+
+  
+          <!-- /END THE FEATURETTES -->
+        </div>
+
+    <div class="cartoon2">
+      <main>
+        <center>
+
+          <section class="recent-projects">
+            <div class="logo2">
+              <div class="name_logo2">
+                <h1>Последние проекты</h1>
+              </div>
+            </div>
+            <div class="projects">
+              {% for project in projects %}
+              <div class="project-card" onclick="toggleDescription(this)">
+                <img
+                  src="{{ url_for('static', filename='uploads/' + project['file']) }}"
+                  alt="Project Image"
+                  class="project-image"
+                />
+                <h3>{{ project['title'] }}</h3>
+                <p class="date">{{ project['date'] }}</p>
+                <p class="description" style="display: none">
+                  {{ project['description'] }}
+                </p>
+              </div>
+
+              {% endfor %}
+            </div>
+          </section>
+
+          <section class="recent-news">
+            <div class="logo2">
+              <div class="name_logo2">
+                <h1>Последние новости</h1>
+              </div>
+            </div>
+            <div class="news">
+              {% for article in news %}
+              <div class="news-card" onclick="toggleDescription(this)">
+                <img
+                  src="{{ url_for('static', filename='uploads/' + article['file']) }}"
+                  alt="News Image"
+                  class="news-image"
+                />
+                <h3>{{ article['title'] }}</h3>
+                <p class="date">{{ article['date'] }}</p>
+                <p class="description" style="display: none">
+                  {{ article['description'] }}
+                </p>
+              </div>
+              {% endfor %}
+            </div>
+          </section>
+
+          <section class="upcoming-events">
+            <div class="logo2">
+              <div class="name_logo2">
+                <h1>Предстоящие события</h1>
+              </div>
+            </div>
+            <p>Скоро будут добавлены события...</p>
+          </section>
+        </center>
+      </main>
+    </div>
+    <footer class="footer" style="position: relative; margin-top: 100px">
+      <div class="footer_content">
+        <div class="footer_section">
+          <h4>О проекте</h4>
+          <p>
+            Наш проект посвящен продвижению экологической осведомленности и
+            устойчивого развития в Казахстане. Мы стремимся вдохновить людей
+            заботиться о природе и активно участвовать в её защите.
+          </p>
+        </div>
+        <div class="footer_section">
+          <h4>Контакты</h4>
+          <ul>
+            <li>Email: <a href="mailto:info@ecokz.kz">sch93@kargoo.kz</a></li>
+            <li>Телефон: 8(7212) 25-31-28</li>
+            <li>Адрес: г. Караганда, ул. Алиханова, 24</li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Социальные сети</h4>
+          <ul class="social_links">
+            <li>
+              <a
+                href="https://www.facebook.com/sch93krg/
+              "
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/gimnazia_imeni_shakarima/"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>© 2024 Экология Свет Шакарима.</p>
+      </div>
+    </footer>
+
+    <script src="../static/main.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

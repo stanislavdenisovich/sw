@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ключи Участника</title>
+    <link rel="stylesheet" href="../static/main.css" />
+    <link rel="stylesheet" href="../static/achievements_list.css" />
+  </head>
+  <style>
+    a {
+      color: #ffffff;
+    }
+    .form-container {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      margin-left: 38%;
+      margin-bottom: 300px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+      margin-bottom: 15px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #74ebd5;
+      outline: none;
+      box-shadow: 0 0 8px rgba(116, 235, 213, 0.5);
+    }
+
+    input[type="submit"] {
+      background: #d1d1d1;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #8b8b8b;
+      transform: translateY(-3px);
+    }
+
+    input[type="submit"]:active {
+      transform: translateY(0);
+    }
+  </style>
+  <body>
+    <header style="margin-bottom: 100px">
+      <nav>
+        <span><a href="/main_member" id="store_id">Главная</a></span>
+        <span><a href="/events_member" id="store_id">События</a></span>
+        <span><a href="/project_member" id="store_id2">Проекты</a></span>
+        <span><a href="/news_member" id="store_id3">Новости</a></span>
+        <span><a href="/chatAI_member" id="store_id4">Чат с AI</a></span>
+        <span><a href="/konkursi_member" id="store_id5">Конкурсы</a></span>
+        <span
+          ><a href="/rukovoditeli_member" id="store_id6">Руковоство</a></span
+        >
+        <span><a href="/people_member" id="store_id7">Участники</a></span>
+        <span
+          ><a href="/achievements_member" id="store_id8"
+            >Достижения Школы</a
+          ></span
+        >
+        <span
+          ><a href="/achievements_frac_member" id="store_id9"
+            >Достижения Фракции</a
+          ></span
+        >
+        <span><a href="/ustav_member" id="store_id10">Устав клуба</a></span>
+        <img
+          id="cur"
+          src="https://cdn.icon-icons.com/icons2/3285/PNG/512/magnifying_glass_magnifier_search_icon_208236.png"
+          alt=""
+          style="width: 30px; height: auto"
+        />
+      </nav>
+    </header>
+    <div class="form-container">
+      <h1>Обновление Ключа Участника</h1>
+      <div>
+        <form method="POST" action="/member_key">
+          <input type="text" name="admin_key" placeholder="Ключ админа" />
+          <input
+            type="text"
+            name="new_member_key"
+            placeholder="Новый ключ участника"
+          />
+          <input
+            type="text"
+            name="new_member_key_confirm"
+            placeholder="Подтвердить ключ участника"
+          />
+          <input type="submit" class="sign up" value="Подтвердить" />
+        </form>
+      </div>
+    </div>
+    <footer class="footer" style="position: relative; margin-top: 300px">
+      <div class="footer_content">
+        <div class="footer_section">
+          <h4>О проекте</h4>
+          <p>
+            Наш проект посвящен продвижению экологической осведомленности и
+            устойчивого развития в Казахстане. Мы стремимся вдохновить людей
+            заботиться о природе и активно участвовать в её защите.
+          </p>
+        </div>
+        <div class="footer_section">
+          <h4>Контакты</h4>
+          <ul>
+            <li>Email: <a href="mailto:info@ecokz.kz">sch93@kargoo.kz</a></li>
+            <li>Телефон: 8(7212) 25-31-28</li>
+            <li>Адрес: г. Караганда, ул. Алиханова, 24</li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Социальные сети</h4>
+          <ul class="social_links">
+            <li>
+              <a
+                href="https://www.facebook.com/sch93krg/
+              "
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/gimnazia_imeni_shakarima/"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>© 2024 Экология Свет Шакарима.</p>
+      </div>
+    </footer>
+  </body>
+</html>

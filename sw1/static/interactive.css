@@ -1,0 +1,220 @@
+/* Основной стиль кнопки */
+.btn2 {
+  display: inline-block;
+  background: linear-gradient(45deg, #2a722a, #4b9a2e, #7bbf7d);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%; /* Делает кнопку круглой */
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(1, 126, 18, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+/* Увеличение при наведении */
+.btn2:hover {
+  transform: scale(1.2); /* Увеличение размера */
+  box-shadow: 0 4px 10px rgba(1, 126, 18, 0.4);
+  background: linear-gradient(45deg, #2a722a, #4b9a2e, #7bbf7d);
+}
+
+/* Основной стиль кнопки */
+#btn3 {
+  display: inline-block;
+  background: linear-gradient(45deg, #ca1010, #e65b43, #f3735c);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%; /* Делает кнопку круглой */
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(1, 126, 18, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Увеличение при наведении */
+#btn3:hover {
+  transform: scale(1.2); /* Увеличение размера */
+  box-shadow: 0 4px 10px rgba(1, 126, 18, 0.4);
+  background: linear-gradient(45deg, #a00909, #c74c36, #d8634e);
+}
+
+/* Стиль для tooltip */
+.tooltip2 {
+  text-align: left;
+  position: absolute;
+  bottom: 120%; /* Расположение сверху кнопки */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f4f4f4; /* Золотой фон */
+  color: #2a722a; /* Черный текст */
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 5;
+}
+
+.tooltip2::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #f4f4f4 transparent transparent transparent;
+}
+
+/* Показываем tooltip при наведении */
+.btn2:hover .tooltip2 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Показываем tooltip при наведении */
+#btn3:hover .tooltip2 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Сдвиг остальных кнопок на задний план */
+.btn2.inactive,
+#btn3.inactive {
+  opacity: 0; /* Прячем кнопку */
+  transform: scale(0.8); /* Уменьшаем размер */
+  z-index: 0; /* Сдвигаем на задний фон */
+}
+
+/* Скрытие кнопок, которые не активны */
+.btn2.hidden,
+#btn3.hidden {
+  display: none;
+}
+
+.tooltip2 p {
+  margin: 5px 0;
+  font-family: "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #2a722a;
+}
+
+.card1 {
+  position: absolute;
+  margin-left: 950px;
+  margin-top: -460px;
+}
+.card2 {
+  position: absolute;
+  margin-left: 960px;
+  margin-top: -350px;
+}
+.card3 {
+  position: absolute;
+  margin-left: 950px;
+  margin-top: -230px;
+}
+.card4 {
+  position: absolute;
+  margin-left: 1070px;
+  margin-top: -370px;
+}
+.card5 {
+  position: absolute;
+  margin-left: 1200px;
+  margin-top: -230px;
+}
+.card6 {
+  position: absolute;
+  margin-left: 1325px;
+  margin-top: -220px;
+}
+.card7 {
+  position: absolute;
+  margin-left: 1420px;
+  margin-top: -240px;
+}
+.card8 {
+  position: absolute;
+  margin-left: 1530px;
+  margin-top: -200px;
+}
+.card9 {
+  position: absolute;
+  margin-left: 1550px;
+  margin-top: -270px;
+}
+.card10 {
+  position: absolute;
+  margin-left: 1560px;
+  margin-top: -400px;
+}
+.card11 {
+  position: absolute;
+  margin-left: 1650px;
+  margin-top: -440px;
+}
+.card12 {
+  position: absolute;
+  margin-left: 1450px;
+  margin-top: -350px;
+}
+.card13 {
+  position: absolute;
+  margin-left: 1280px;
+  margin-top: -320px;
+}
+.card14 {
+  position: absolute;
+  margin-left: 1240px;
+  margin-top: -420px;
+}
+.card15 {
+  position: absolute;
+  margin-left: 1300px;
+  margin-top: -460px;
+}
+.card16 {
+  position: absolute;
+  margin-left: 1300px;
+  margin-top: -520px;
+}
+.card17 {
+  position: absolute;
+  margin-left: 1470px;
+  margin-top: -500px;
+}
+
+.card18 {
+  position: absolute;
+  margin-left: 920px;
+  margin-top: -300px;
+}
+.card19 {
+  position: absolute;
+  margin-left: 1500px;
+  margin-top: -290px;
+}
+.card20 {
+  position: absolute;
+  margin-left: 1070px;
+  margin-top: -260px;
+}
+.card21 {
+  position: absolute;
+  margin-left: 1540px;
+  margin-top: -460px;
+}

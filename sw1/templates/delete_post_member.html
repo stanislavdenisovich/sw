@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удаление записей</title>
+</head>
+<body>
+    <h1>Удаление записей</h1>
+    <form method="GET" action="/delete_post_member">
+        <label for="category">Выберите категорию:</label>
+        <select name="category" id="category">
+            <option value="news_1">Новости</option>
+            <option value="events_1">События</option>
+            <option value="projects_1">Проекты</option>
+            <option value="people_1">Люди</option>
+            <option value="achievements_1">Достижения школы</option>
+            <option value="achievements_frac_1">Достижения фракций</option>
+        </select>
+        <br><br>
+        <label for="date">Фильтр по дате:</label>
+        <input type="date" name="date" id="date">
+        <br><br>
+        <button type="submit">Показать записи</button>
+    </form>
+    <hr>
+    <form method="POST" action="/delete_post_mmeber">
+        <input type="hidden" name="table_name" value="{{ request.args.get('category', 'news_1') }}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Название</th>
+                    <th>Дата</th>
+                    <th>Выбрать</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr>
+                    <td>{{ post[0] }}</td>
+                    <td>{{ post[1] }}</td>
+                    <td>{{ post[2] }}</td>
+                    <td><input type="radio" name="post_id" value="{{ post[0] }}"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <button type="submit">Удалить выбранную запись</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Редактировать Группы</title>
+    <link rel="stylesheet" href="../static/main.css" />
+    <link rel="stylesheet" href="../static/achievements_list.css" />
+  </head>
+  <style>
+    a {
+      color: #ffffff;
+    }
+  </style>
+  <body>
+    <header style="margin-bottom: 100px">
+      <nav>
+        <span><a href="/main_admin" id="store_id">Главная</a></span>
+        <span><a href="/events_admin" id="store_id">События</a></span>
+        <span><a href="/project_admin" id="store_id2">Проекты</a></span>
+        <span><a href="/news_admin" id="store_id3">Новости</a></span>
+        <span><a href="/people_admin" id="store_id7">Участники</a></span>
+        <span
+          ><a href="/achievements_admin" id="store_id8"
+            >Достижения Школы</a
+          ></span
+        >
+        <span
+          ><a href="/achievements_frac_admin" id="store_id9"
+            >Достижения Фракции</a
+          ></span
+        >
+        <img
+          id="cur"
+          src="https://cdn.icon-icons.com/icons2/3285/PNG/512/magnifying_glass_magnifier_search_icon_208236.png"
+          alt=""
+          style="width: 30px; height: auto"
+        />
+      </nav>
+    </header>
+
+    <section class="add-project" style="margin-left: 20%">
+      <h1>Редактировать Группы:</h1>
+      <form method="POST">
+        <h2>Add Group</h2>
+        <input type="text" name="new_group" placeholder="Group Name" required />
+        <button type="submit" name="action" value="add">Add Group</button>
+      </form>
+    </section>
+
+    <section class="add-project" style="margin-left: 20%">
+      <form method="POST">
+        <h2>Delete Group</h2>
+        <select name="group_to_delete" required>
+          <option value="" disabled selected>Select Group</option>
+          {% for group in groups %}
+          <option value="{{ group[0] }}">{{ group[0] }}</option>
+          {% endfor %}
+        </select>
+        <button type="submit" name="action" value="delete">Delete Group</button>
+      </form>
+    </section>
+
+    <section class="add-project" style="margin-left: 20%">
+      <form method="POST">
+        <h2>Change Group</h2>
+        <select name="old_group" required>
+          <option value="" disabled selected>Select Group to Change</option>
+          {% for group in groups %}
+          <option value="{{ group[0] }}">{{ group[0] }}</option>
+          {% endfor %}
+        </select>
+        <input
+          type="text"
+          name="new_group"
+          placeholder="New Group Name"
+          required
+        />
+        <button type="submit" name="action" value="change">Change Group</button>
+      </form>
+    </section>
+
+    <section class="add-project" style="margin-left: 20%">
+      <h2>Existing Groups</h2>
+      <ul>
+        {% for group in groups %}
+        <li>{{ group[0] }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <footer class="footer" style="position: relative; margin-top: 300px">
+      <div class="footer_content">
+        <div class="footer_section">
+          <h4>О проекте</h4>
+          <p>
+            Наш проект посвящен продвижению экологической осведомленности и
+            устойчивого развития в Казахстане. Мы стремимся вдохновить людей
+            заботиться о природе и активно участвовать в её защите.
+          </p>
+        </div>
+        <div class="footer_section">
+          <h4>Контакты</h4>
+          <ul>
+            <li>Email: <a href="mailto:info@ecokz.kz">sch93@kargoo.kz</a></li>
+            <li>Телефон: 8(7212) 25-31-28</li>
+            <li>Адрес: г. Караганда, ул. Алиханова, 24</li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Социальные сети</h4>
+          <ul class="social_links">
+            <li>
+              <a
+                href="https://www.facebook.com/sch93krg/
+              "
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/gimnazia_imeni_shakarima/"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>© 2024 Экология Свет Шакарима.</p>
+      </div>
+    </footer>
+  </body>
+</html>

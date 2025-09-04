@@ -1,0 +1,128 @@
+/* Основные стили страницы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c2b694;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 50px;
+}
+
+/* Основной контейнер */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #9ca870;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Форма добавления достижения */
+.add-achievement {
+  margin-bottom: 30px;
+}
+
+.add-achievement h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+form input,
+form select,
+form textarea {
+  background-color: #c5d395;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+form button {
+  background-color: #e0d9c5;
+  color: black;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #f1e9d4;
+}
+
+/* Блок с добавленным достижением */
+.achievement-preview {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #c5d395;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.achievement-preview h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.achievement-preview p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.achievement-preview a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.achievement-preview a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #e0d9c5;
+  color: 423526;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#ext {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+button:hover {
+  background-color: #f1e9d4;
+  transform: translateY(-2px);
+}

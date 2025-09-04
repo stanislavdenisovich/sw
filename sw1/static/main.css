@@ -1,0 +1,419 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to right, #c2e7d9, #a1d4b6); */
+  /* background: linear-gradient(135deg, #e0f5e2, #bee0c4); */
+  background-image: url("https://static.tildacdn.com/tild6565-3265-4434-b239-386633316537/71748.jpg");
+  background-size: cover;
+}
+
+.svet {
+  font-family: "Snell Roundhand", cursive;
+  font-size: 84px;
+  font-weight: 100;
+  text-align: center;
+  color: #2a722a; /* Элегантный голубой цвет */
+  text-shadow: 3px 3px 6px rgba(146, 146, 146, 0.87),
+    0 0 15px rgba(153, 153, 153, 0.788);
+  margin-top: 20px;
+  letter-spacing: 2px; /* Легкое увеличение расстояния между буквами */
+  z-index: -1;
+}
+
+.cartoon2 {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.main2 {
+  margin-top: -40px;
+  opacity: 100%;
+}
+header {
+  background: linear-gradient(180deg, #2d6a4f, #1b4332); /* Зеленый градиент */
+  border-bottom: 1px solid #1b4332;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Начальный стиль */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: top 0.3s; /* Плавный переход */
+}
+
+header.hidden {
+  top: -100px; /* Убираем шапку, когда прокрутили вниз на 1000px */
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  height: 20px;
+}
+
+.main22 {
+  margin-top: 180px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  margin-left: -350px;
+  inset: 25px;
+  transform: translate(10px, 8px);
+  z-index: -1;
+  background: linear-gradient(
+    to right,
+    rgb(80, 80, 80),
+    rgb(102, 102, 102),
+    rgb(139, 139, 139),
+    rgb(56, 56, 56),
+    rgb(131, 131, 131),
+    rgb(110, 110, 110),
+    rgb(110, 110, 110)
+  );
+  filter: blur(50px);
+}
+
+nav span {
+  margin: 0 45px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  line-height: 2;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav span:hover {
+  color: #fff; /* Цвет текста при наведении */
+  font-size: 16px; /* Увеличение размера шрифта */
+  text-decoration: underline; /* Подчеркивание */
+  text-decoration-color: #ffffff; /* Цвет подчеркивания */
+  transform: scale(1.1); /* Легкое увеличение элемента */
+}
+
+nav img #cur {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+nav span {
+  margin-left: 0;
+}
+
+#cur:hover {
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#apple_gift {
+  margin-top: 00px;
+}
+
+#apple_h1 {
+  font-size: 55px;
+}
+
+h2#apple_h2 {
+  border-radius: 20px;
+  margin-left: 23%;
+  margin-right: 20%;
+  font-family: "Poppins", sans-serif; /* Легкий и современный шрифт */
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 3px; /* Расстояние между буквами */
+  color: #006400; /* Цвет синего текста */
+  position: relative; /* Для правильного позиционирования ::after */
+  transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+h2#apple_h2 a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #585858; /* Ссылка наследует цвет заголовка */
+  position: relative; /* Для работы ::after */
+  transition: color 0.3s ease, transform 0.3s ease; /* Плавное изменение цвета и эффекта */
+}
+
+h2#apple_h2 a:hover {
+  color: #333; /* Цвет ссылки при наведении */
+  transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+h2#apple_h2 a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #333;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+h2#apple_h2 a:hover::after {
+  transform: scaleX(1); /* Появление подчеркивания при наведении */
+}
+
+h2#apple_h2:hover {
+  color: #2980b9; /* Изменение цвета заголовка при наведении */
+}
+
+.footer {
+  background: linear-gradient(180deg, #2d6a4f, #1b4332); /* Зеленый градиент */
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer_section {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+}
+
+.footer_section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #74c69d; /* Акцент */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer_section p,
+.footer_section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer_section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_section ul li {
+  margin-bottom: 10px;
+}
+
+.footer_section ul li a {
+  color: #74c69d; /* Цвет ссылок */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer_section ul li a:hover {
+  color: #95d5b2; /* Изменение цвета при наведении */
+}
+
+.social_links {
+  display: flex;
+  gap: 10px;
+}
+
+.social_links li {
+  display: inline-block;
+}
+
+.footer_bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #74c69d; /* Тонкая разделительная линия */
+  padding-top: 15px;
+  font-size: 14px;
+  color: #d8f3dc;
+}
+
+section {
+  color: #006400; /* Контрастный тёмно-коричневый */
+  margin-left: 20%;
+  margin-right: 20%;
+  background: linear-gradient(
+    135deg,
+    #f5f5f5,
+    #eaeaea
+  ); /* Градиент для стиля */
+  margin-bottom: 80px;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Глубокая тень */
+  transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+/* Наведение на разделы */
+section:hover {
+  background-color: #dddddd; /* Темный зеленый оттенок для интерактивности */
+  transform: translateY(-5px); /* Легкое поднятие при наведении */
+}
+
+/* Стили для карточек */
+.projects,
+.news {
+  display: flex;
+  overflow-x: auto;
+  gap: 170px;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+
+.project-card,
+.news-card {
+  color: #006400;
+  width: 340px;
+  cursor: pointer;
+  background-color: #e4e4e4; /* Глубокий зеленый для карточек */
+  border-radius: 16px; /* Сделаем уголки более круглыми для элегантности */
+  padding: 25px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Легкая, но заметная тень */
+}
+
+.project-card:hover,
+.news-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Усиленный эффект */
+}
+
+/* Картинки в постах */
+.project-image,
+.news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Картинки обрезаются для заполнения контейнера */
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Эффект при наведении на изображения */
+.project-image:hover,
+.news-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9; /* Легкая прозрачность при наведении */
+}
+
+/* Стиль для текста в карточках */
+.project-card h2,
+.news-card h2 {
+  font-size: 2rem; /* Увеличенный размер шрифта для привлечения внимания */
+  font-weight: 700;
+  color: #4e3e2c; /* Мягкий светло-желтый для выделения */
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  font-family: "Lora", serif; /* Элегантный шрифт */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+}
+
+.project-card p,
+.news-card p {
+  font-size: 1.2rem; /* Легкое увеличение текста */
+  line-height: 1.8;
+  color: #525252; /* Тёмно-серый */
+}
+
+/* Анимация плавных переходов */
+section,
+.project-card,
+.news-card {
+  transition: all 0.3s ease;
+}
+
+.about_us_text {
+  margin-top: 50px;
+  text-align: left;
+  max-width: calc(100% - 420px); /* Ограничение ширины текста */
+  padding: 40px;
+  background: linear-gradient(180deg, #ffffff, #f9f9f9); /* Легкий градиент */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+  border: 1px solid #eaeaea; /* Тонкая рамка */
+}
+
+.about_us_text h2 {
+  font-size: 42px;
+  color: #2a722a; /* Зеленый акцент */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2a722a; /* Подчеркнутый заголовок */
+  display: inline-block; /* Подчеркивание только под текстом */
+  padding-bottom: 5px;
+  font-family: "Arial", sans-serif; /* Красивый шрифт */
+}
+
+.about_us_text h3 {
+  font-size: 32px;
+  color: #333333; /* Более темный акцент */
+  margin-bottom: 15px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; /* Прописные буквы для названия */
+}
+
+.about_us_text p {
+  font-size: 22px;
+  color: #555555;
+  line-height: 1.8; /* Увеличенный интервал для читабельности */
+  margin-bottom: 20px;
+  font-family: "Georgia", serif; /* Шрифт с засечками для параграфов */
+}
+
+/* Декоративные разделители между секциями */
+.about_us_text p:not(:last-child) {
+  border-bottom: 1px dashed #eaeaea; /* Разделитель между абзацами */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+main {
+  background-image: url("https://ecojer.kz/images/1692674281.64e428e92ea9c.png");
+}
+
+nav::before {
+  background: none;
+}
+.highlighted {
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}

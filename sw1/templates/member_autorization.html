@@ -1,0 +1,65 @@
+<!-- сделано -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Авторизация Участника</title>
+    <link rel="stylesheet" href="../static/auth.css" />
+  </head>
+  <body>
+    <img
+      src="https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-ornament-kazakhskii-png-16.png"
+      alt=""
+      style="width: 350px; height: auto; position: absolute; top: 0; left: 0"
+    />
+    <img
+      src="https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-ornament-kazakhskii-png-16.png"
+      alt="Казахский орнамент"
+      style="
+        width: 350px;
+        height: auto;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        transform: rotate(90deg);
+      "
+    />
+    <img
+      src="https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-ornament-kazakhskii-png-16.png"
+      alt="Казахский орнамент"
+      style="
+        width: 350px;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+      "
+    />
+    <img
+      src="https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-ornament-kazakhskii-png-16.png"
+      alt="Казахский орнамент"
+      style="
+        width: 350px;
+        height: auto;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        transform: rotate(-90deg);
+      "
+    />
+
+    <div class="auth-container">
+      <h1>Авторизация Участника</h1>
+      <form action="/member_autorization" method="POST">
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Пароль" required />
+        <button type="submit">Войти</button>
+      </form>
+      <a href="/member_registration" class="auth-link"
+        >Нет аккаунта? Зарегистрироваться</a
+      >
+    </div>
+  </body>
+</html>

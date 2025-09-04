@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проекты</title>
+    <link rel="stylesheet" href="../static/project_list.css" />
+    <link rel="stylesheet" href="../static/main.css" />
+  </head>
+  <body>
+    <header style="margin-bottom: 100px">
+      <nav>
+        <span><a href="/">Главная</a></span>
+        <span><a href="/events_list" id="store_id">События</a></span>
+        <span><a href="/project_list" id="store_id2">Проекты</a></span>
+        <span><a href="/news_list" id="store_id3">Новости</a></span>
+        <span><a href="/chatAI" id="store_id4">Чат с AI</a></span>
+        <span><a href="/people_list" id="store_id7">Участники</a></span>
+        <span
+          ><a href="/achievements_list" id="store_id8"
+            >Достижения Школы</a
+          ></span
+        >
+        <span
+          ><a href="/achievements_frac_list" id="store_id9"
+            >Достижения Фракции</a
+          ></span
+        >
+        <img
+          id="cur"
+          src="https://cdn.icon-icons.com/icons2/3285/PNG/512/magnifying_glass_magnifier_search_icon_208236.png"
+          alt=""
+          style="width: 30px; height: auto"
+        />
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Все Проекты</h1>
+      {% if projects %} {% for project in projects %}
+      <div class="project">
+        <div class="project-header">
+          <div class="project-group">Группа: {{ project[1] }}</div>
+          <div class="project-date">Дата: {{ project[3] }}</div>
+          <div class="project-title">{{ project[0] }}</div>
+        </div>
+        <center>
+          <img
+            src="{{ url_for('static', filename='uploads/' + project[4]) }}"
+            alt="Project Image"
+            class="project-image"
+          />
+        </center>
+        <div class="project-description">{{ project[2] }}</div>
+      </div>
+      {% endfor %} {% else %}
+      <p class="no-projects">На данный момент нет проектов.</p>
+      {% endif %}
+    </div>
+    <footer class="footer" style="position: relative; margin-top: 300px">
+      <div class="footer_content">
+        <div class="footer_section">
+          <h4>О проекте</h4>
+          <p>
+            Наш проект посвящен продвижению экологической осведомленности и
+            устойчивого развития в Казахстане. Мы стремимся вдохновить людей
+            заботиться о природе и активно участвовать в её защите.
+          </p>
+        </div>
+        <div class="footer_section">
+          <h4>Контакты</h4>
+          <ul>
+            <li>Email: <a href="mailto:info@ecokz.kz">sch93@kargoo.kz</a></li>
+            <li>Телефон: 8(7212) 25-31-28</li>
+            <li>Адрес: г. Караганда, ул. Алиханова, 24</li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Социальные сети</h4>
+          <ul class="social_links">
+            <li>
+              <a
+                href="https://www.facebook.com/sch93krg/
+              "
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/gimnazia_imeni_shakarima/"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>© 2024 Экология Свет Шакарима.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

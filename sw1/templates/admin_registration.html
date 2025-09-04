@@ -1,0 +1,102 @@
+<!-- сделано  -->
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация Админа</title>
+    <link rel="stylesheet" href="../static/auth.css" />
+  </head>
+  <body>
+    <img
+      src="https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-ornament-kazakhskii-png-16.png"
+      alt=""
+      style="width: 350px; height: auto; position: absolute; top: 0; left: 0"
+    />
+    <img
+      src="https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-ornament-kazakhskii-png-16.png"
+      alt="Казахский орнамент"
+      style="
+        width: 350px;
+        height: auto;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        transform: rotate(90deg);
+      "
+    />
+    <img
+      src="https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-ornament-kazakhskii-png-16.png"
+      alt="Казахский орнамент"
+      style="
+        width: 350px;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+      "
+    />
+    <img
+      src="https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-ornament-kazakhskii-png-16.png"
+      alt="Казахский орнамент"
+      style="
+        width: 350px;
+        height: auto;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        transform: rotate(-90deg);
+      "
+    />
+
+    <div class="auth-container">
+      <h1>Регистрация Админа</h1>
+      <form action="/admin_registration" method="POST">
+        <div class="input-group">
+          <input type="text" name="first_name" placeholder="Имя" required />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            name="second_name"
+            placeholder="Фамилия"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <input
+            type="password"
+            name="password"
+            placeholder="Пароль"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="password"
+            name="password_confirm"
+            placeholder="Подтвердите пароль"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            name="secret_key"
+            placeholder="Секретный ключ"
+            required
+          />
+        </div>
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+      <a href="/admin_autorization" class="auth-link"
+        >Уже зарегистрированы? Войти</a
+      >
+    </div>
+  </body>
+</html>

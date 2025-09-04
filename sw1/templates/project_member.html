@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проект</title>
+    <link rel="stylesheet" href="../static/main.css" />
+    <link rel="stylesheet" href="../static/project_list.css" />
+  </head>
+  <style>
+    a {
+      color: #ffffff;
+    }
+  </style>
+  <body>
+    <header style="margin-bottom: 100px">
+      <nav>
+        <span><a href="/main_member" id="store_id">Главная</a></span>
+        <span><a href="/events_member" id="store_id">События</a></span>
+        <span><a href="/project_member" id="store_id2">Проекты</a></span>
+        <span><a href="/news_member" id="store_id3">Новости</a></span>
+        <span><a href="/people_member" id="store_id7">Участники</a></span>
+        <span
+          ><a href="/achievements_member" id="store_id8"
+            >Достижения Школы</a
+          ></span
+        >
+        <span
+          ><a href="/achievements_frac_member" id="store_id9"
+            >Достижения Фракции</a
+          ></span
+        >
+        <img
+          id="cur"
+          src="https://cdn.icon-icons.com/icons2/3285/PNG/512/magnifying_glass_magnifier_search_icon_208236.png"
+          alt=""
+          style="width: 30px; height: auto"
+        />
+      </nav>
+    </header>
+    <div class="container">
+      <h2>Добавить проект:</h2>
+      <form action="/project_admin" method="POST" enctype="multipart/form-data">
+        <label for="title">Заголовок проекта:</label>
+        <input type="text" name="title" id="title" required />
+
+        <label for="group">Группа:</label>
+        <select name="group" id="group" required>
+          {% for group in groups %}
+          <option value="{{ group[0] }}">{{ group[0] }}</option>
+          {% endfor %}
+        </select>
+
+        <label for="description">Описание:</label>
+        <textarea name="description" id="description" required></textarea>
+
+        <label for="date">Дата:</label>
+        <input type="date" name="date" id="date" required />
+
+        <label for="file">Загрузить файл:</label>
+        <input type="file" name="file" id="file" required />
+
+        <button type="submit">Добавить проект</button>
+      </form>
+
+      {% if image %}
+      <h3>Проект успешно добавлен!</h3>
+      <p><strong>Заголовок:</strong> {{ title }}</p>
+      <p><strong>Группа:</strong> {{ group }}</p>
+      <p><strong>Дата:</strong> {{ date }}</p>
+      <p><strong>Описание:</strong> {{ description }}</p>
+      <p>
+        <strong>Файл:</strong>
+        <a
+          href="{{ url_for('static', filename='uploads/' + image) }}"
+          target="_blank"
+          >Скачать</a
+        >
+      </p>
+      {% endif %}
+    </div>
+
+    <footer class="footer" style="position: relative; margin-top: 300px">
+      <div class="footer_content">
+        <div class="footer_section">
+          <h4>О проекте</h4>
+          <p>
+            Наш проект посвящен продвижению экологической осведомленности и
+            устойчивого развития в Казахстане. Мы стремимся вдохновить людей
+            заботиться о природе и активно участвовать в её защите.
+          </p>
+        </div>
+        <div class="footer_section">
+          <h4>Контакты</h4>
+          <ul>
+            <li>Email: <a href="mailto:info@ecokz.kz">sch93@kargoo.kz</a></li>
+            <li>Телефон: 8(7212) 25-31-28</li>
+            <li>Адрес: г. Караганда, ул. Алиханова, 24</li>
+          </ul>
+        </div>
+        <div class="footer_section">
+          <h4>Социальные сети</h4>
+          <ul class="social_links">
+            <li>
+              <a
+                href="https://www.facebook.com/sch93krg/
+              "
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/gimnazia_imeni_shakarima/"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p>© 2024 Экология Свет Шакарима.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
